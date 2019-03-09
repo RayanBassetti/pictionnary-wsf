@@ -12,24 +12,6 @@ var text_guess = document.getElementById("to_guess");
 
 var time_left = document.getElementById("time_left");
 
-
-/*
-var rounds_texte = document.getElementById("rounds_text");
-
-var equipe_1 = 0;
-var equipe1_activation = false;
-
-var equipe_2 = 0;
-var equipe2_activation = false;
-
-var rounds = 1;
-
-var start = false;
-
-var my_data = randomArray[0];
-
-*/
-
 var reseter = document.querySelector('#reset');
 
 window.addEventListener("keyup", function(event) {
@@ -53,30 +35,6 @@ function reset() {
 }
 
     
-
-    /*
-    while (equipe_1 !== 3 || equipe_2 !== 3){
-
-
-        function dataErase() {
-            data = data - my_data;
-            rounds_texte.innerHTML = "Round numéro : " + rounds;
-        }
-
-        function rajoutPointEquipe1() {
-            equipe1 = equipe1 + 1;
-            equipe1_text.innerHTML = "Manches gagnées : " + equipe1;
-        }
-
-        function rajoutPointEquipe2() {
-            equipe2 = equipe2 + 1;
-            equipe2_text.innerHTML = "Manches gagnées : " + equipe2;
-        }
-    }
-
-    rounds = rounds + 1;
-
-    */
 
 
 
