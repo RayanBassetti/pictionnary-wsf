@@ -1,0 +1,117 @@
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    height : 100%;
+    width : 100%;
+    margin : 0;
+}
+
+body {
+    height : 100%;
+    width : 100%;
+    margin : 0;
+}
+
+main {
+    height : 100%;
+    width : 100%;
+}
+
+img {
+    width : 30%;
+    height : 30%;
+}
+
+#page_base {
+    height : 100%;
+    width : 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color : black;
+    color : white;
+}
+
+#regles {
+    text-align: center;
+}
+
+#regles h1 {
+    text-transform: uppercase;
+}
+
+#regles ol {
+    padding : 0;
+    font-size : 3em;
+    list-style-type: none;
+}
+
+footer {
+    margin : 0;
+}
+
+footer p{
+    text-align: center;
+}
+
+button {
+    color : black;
+}
+
+#button_launch {
+    width : 20%;
+    height : 10%;
+    font-size : 2em;
+    text-transform: uppercase;
+}
+
+#button_launch:hover {
+    background-color : red;
+    color : white;
+    border : 0;
+}
+
+/* CSS DE PAGE JEU */
+
+#page_jeu {
+    margin : 0;
+    display: none;
+    background-image : url("https://images7.alphacoders.com/671/thumb-1920-671281.jpg");
+}
+
+#texte {
+    color : black;
+    font-size : 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#texte h6 {
+    margin : 0;
+    margin-top : 3%;
+}
+
+#to_guess {
+    text-transform: uppercase;
+}
+
+#time_left {
+    font-size : 1.3em;
+    text-align: center;
+}
+
+#reset {
+    visibility: hidden;
+
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px) {
+    
+  }

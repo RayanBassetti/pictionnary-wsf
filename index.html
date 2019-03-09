@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PICTIONNARY DE LA WSF</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+
+    <main>
+
+        <section id="page_base">
+        
+            <img src="images/logo.png" alt="">
+
+            <div id="regles">
+
+                <h1>Règles :</h1>
+
+                <ol>
+                    <li>2 équipes</li>
+                    <li>1 minute pour dessiner un mot</li>
+                    <li>Chaque victoire donne 1 point</li>
+                    <li>Les 1ers arrivés à 3 points gagnent</li>
+                </ol>
+
+            </div>
+
+            <button id="button_launch" onclick="launch_game()">Lancer la partie</button>
+
+        </section>
+
+        <section id="page_jeu">
+
+                <div id="texte">
+
+                        <h6>Mot à deviner : </h6>
+        
+                        <h1 id="to_guess"></h1>
+        
+                        <h4 id="time_left">bite</h4>
+
+                        <h3 id="equipe1_text"></h3>
+
+                        <h3 id="equipe2_text"></h3>
+
+                        <button id="reset" onclick="reset()">Appuyer sur "ENTER" pour recommencer.</button>
+        
+                </div>
+
+        </section>
+
+    </main>
+    <script language="JavaScript"> // script here doesn't seem to work in a separated file
+                
+    function t() {
+        
+        var compteur=document.getElementById('time_left');
+        s=duree;
+        m=0;h=0;
+        if(s<0) {
+            compteur.innerHTML="Fin du chrono !";
+            window.addEventListener("keyup", function(event) {
+                event.preventDefault();
+                if (event.keyCode === 13) {
+                    document.getElementById("reset").click();
+                }
+            });
+        }
+        else {
+            if(s>59) {
+                m=Math.floor(s/60);
+                s=s-m*60
+            }
+            if(m>59) {
+                h=Math.floor(m/60);
+                m=m-h*60
+            }
+            if(s<10) {
+                s="0"+s
+            }
+            if(m<10) {
+                m="0"+m
+            }
+            compteur.innerHTML=h+":"+m+":"+s+"";
+        }
+        duree=duree-1;
+        window.setTimeout("t();",999);
+
+    }
+            
+    </script>
+
+    <div id="compteur"></div>
+    <script language="JavaScript">
+        duree="60";
+    </script>
+    <script src="script.js"></script>
+
+
+</body>
+</html>
+
